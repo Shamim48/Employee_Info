@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     String dep;
 
 
-    Button submitbtn;
+    Button submitbtn,cleanBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +68,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        cleanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nameEt.setText("");
+                designationEt.setText("");
+                salaryEt.setText("");
+                addressEt.setText("");
+                phoneEt.setText("");
+                emailEt.setText("");
+                dateEt.setText("");
+                ageEt.setText("");
+            }
+        });
+
     }
     public void toast(String msg){
         Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_SHORT).show();
@@ -83,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         ageEt=findViewById(R.id.agelEtId);
         radioGroupGender=findViewById(R.id.radioGroupFOrGenderId);
         submitbtn=findViewById(R.id.submitBtnId);
+        cleanBtn=findViewById(R.id.cleanBtnId);
     }
 
     public void selectDate(View view) {
