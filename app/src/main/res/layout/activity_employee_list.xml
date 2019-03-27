@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+
+    tools:context=".EmployeeList">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:weightSum="10"
+     android:orientation="vertical"
+     android:layout_height="wrap_content">
+
+     <ListView
+         android:id="@+id/EmployeeListId"
+         android:dividerHeight="1dp"
+         android:divider="@color/black"
+         android:listSelector="#ddddde"
+         android:layout_width="match_parent"
+         android:layout_weight="9.8"
+         android:layout_height="0dp">
+
+     </ListView>
+
+
+     <Button
+         android:text="ADD New"
+         android:id="@+id/AddNewBtnId"
+         android:onClick="addNewItem"
+         android:layout_gravity="right"
+         android:layout_width="wrap_content"
+         android:background="#af018a"
+         android:textSize="18sp"
+         android:textColor="@color/white"
+         android:padding="10dp"
+         android:layout_height="wrap_content" />
+
+
+ </LinearLayout>
+
+</LinearLayout>
